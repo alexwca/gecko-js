@@ -1,0 +1,61 @@
+{
+  "name": "@alexwca/gecko-js",
+  "version": "1.0.1",
+  "description": "Ofuscador JavaScript para proteção de código: dificulta engenharia reversa e cópia de features.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./webpack": {
+      "import": "./dist/webpack-plugin.mjs",
+      "require": "./dist/webpack-plugin.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "obfuscator",
+    "javascript",
+    "protect",
+    "reverse-engineering",
+    "code-protection",
+    "webpack"
+  ],
+  "author": "Alex Willian",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexwca/gecko-js.git"
+  },
+  "homepage": "https://github.com/alexwca/gecko-js#readme",
+  "bugs": {
+    "url": "https://github.com/alexwca/gecko-js/issues"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.24.0",
+    "@babel/parser": "^7.24.0",
+    "@babel/traverse": "^7.24.0",
+    "@babel/types": "^7.24.0"
+  },
+  "optionalDependencies": {
+    "webpack-sources": "^3.0.0"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0 || ^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "webpack": {
+      "optional": true
+    }
+  }
+}
